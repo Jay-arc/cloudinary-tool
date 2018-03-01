@@ -1,11 +1,36 @@
 body {
     background-color: #1E1E1E;
-    color: #e0e0e0
+    color: #e0e0e0;
 }
 
 .nav-item a {
-    color: #e0e0e0
+    color: #e0e0e0;
 }
 .nav-item .disabled {
-    color: #8e8e8e
+    color: #8e8e8e;
+}
+
+.vertical-hr {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+    border: none;
+    border-left: 1px solid #e0e0e0;
+    height: 90%;
+    width: 1px;
+  }
+
+.padded-hr {
+    padding-top: 10px;
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+
+.photo-view {
+    height: 50vh;
+}
+
+.photo-pane {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    height: fit-content;
 }
