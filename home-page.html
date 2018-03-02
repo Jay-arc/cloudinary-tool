@@ -29,28 +29,66 @@
     <!-- display pane on right, image data on the left -->
     <section class="container photo-view">
       <div class="row photo-view">
-          <div class="col-5 photo-pane container">
+          <div class="col-6 photo-pane-left container">
             <img class="img-fluid" src="http://via.placeholder.com/1000x600?text=original-image" alt="">
           </div>
-          <div class="col-2 photo-pane-divider">
-              <hr class="vertical-hr">
-            </div>
-          <div class="col-5 photo-pane">
+          <div class="col-6 photo-pane">
               <img class="img-fluid" src="http://via.placeholder.com/1000x600?text=new-better-image" alt="">
             </div>
     </section>
 
     <!-- bottom ui divider -->
-    <section class="container">
-        <hr class="padded-hr">
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">Left</button>
-            <button type="button" class="btn btn-secondary">Middle</button>
-        </div>
-        <div>
-            <input class="form-control" type="text" placeholder="Default input">
+    <section class="container buttons-and-fields">
+        <div class="row container">
+        <div class="collapse angle-input" id="angleinput">
+            <input class="form-control angle-input" type="text" placeholder="#">
           </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a class="btn btn-primary" data-toggle="collapse" href="#angleinput" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <button type="button" class="btn btn-primary">Angle</button>
+            </a>
+            <button type="button" class="btn btn-secondary">Flip Horizontal</button>
+            <button type="button" class="btn btn-secondary">Flip Veritcal</button>
+        </div>
+      </div>
       </section>
+
+    <!-- text fields -->
+    <section class="container results-section">
+        <div class="row">
+                <div class="col-1">
+                  <a class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
+                      <button type="button" class="btn btn-secondary">Copy</button></a>
+                </div>
+                <div class="col-11">
+                  <input class="form-control" type="text" placeholder="Original URL">
+                </div>
+              </div>
+    </section>
+
+              <section class="container results-section">
+                  <div class="row">
+                          <div class="col-1">
+                            <a class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
+                                <button type="button" class="btn btn-secondary">Copy</button></a>
+                          </div>
+                          <div class="col-11">
+                            <input class="form-control" type="text" placeholder="Rules">
+                          </div>
+                        </div>
+              </section>
+            
+<section class="container results-section">
+    <div class="row">
+            <div class="col-1">
+              <a class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
+                  <button type="button" class="btn btn-secondary">Copy</button></a>
+            </div>
+            <div class="col-11">
+              <input class="form-control" type="text" placeholder="Complete URL">
+            </div>
+          </div>
+</section>
 
 
 

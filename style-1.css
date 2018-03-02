@@ -2,14 +2,12 @@ body {
     background-color: #1E1E1E;
     color: #e0e0e0;
 }
-
 .nav-item a {
     color: #e0e0e0;
 }
 .nav-item .disabled {
     color: #8e8e8e;
 }
-
 .vertical-hr {
     color: #e0e0e0;
     border-color: #e0e0e0;
@@ -18,19 +16,46 @@ body {
     height: 90%;
     width: 1px;
   }
-
 .padded-hr {
     padding-top: 10px;
     color: #e0e0e0;
     border-color: #e0e0e0;
 }
-
 .photo-view {
-    height: 50vh;
+    height: 100%;
 }
-
 .photo-pane {
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 5%;
     height: fit-content;
+}
+.photo-pane-left {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: fit-content;
+    border-right: 1px #ffffff solid;
+}
+.results-section {
+    margin-top: 10px;
+}
+.angle-input {
+    text-align: center;
+    width: 90px;
+    height: 52px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-right: 5px;
+}
+.form-control-copy  {
+    text-align: center;
+    width: 90px;
+    height: 39px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 5px;
+}
+.buttons-and-fields {
+border-top: 1px #ffffff solid;
+padding-top: 10px;
+margin-top: 10px;
 }
