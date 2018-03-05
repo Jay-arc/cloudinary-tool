@@ -1,11 +1,32 @@
 .bulk-form-control {
-    line-height: 6.5em !important;
     padding-top: 0;
     padding-bottom: 0;
     border: 0;
   }
+
+textarea::placeholder {
+    vertical-align: middle !important;
+    color:#495057 !important;
+    padding: 2.2em 0em 0em 0em;
+}
+
+.form-control-textarea-bulk {
+    
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    height: 6.5em;
+    min-height: 6.5em !important;
+  }
   
-  .copy-btn-bulk {
+.copy-btn-bulk {
     height: 6.5em !important;
     padding-top: 0;
     padding-bottom: 0;
