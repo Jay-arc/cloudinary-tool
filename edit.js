@@ -1,6 +1,5 @@
 // @ts-check
 $('#src_img').blur(function(){
-    console.log();
     var src_img = $('#src_img').val();
     $('#src_img_url').attr('src',src_img);
 });
@@ -27,5 +26,6 @@ function add_rules(new_rules){
     var src_url = $('#src_img').val();
     var split_url = src_url.split('/v');
     var new_url = split_url[0]+new_rules+"/v"+split_url[1];
+    //load new image here
     $('#complete_url').val(new_url);
 }
