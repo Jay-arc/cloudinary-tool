@@ -1,3 +1,4 @@
+import {add_rules} from './edit.js'
 //global vars 
 var jcrop_api;
 
@@ -72,14 +73,3 @@ function showCoords(c) {
 function clearCoords() {
     $('#coords input').val('');
 };
-
-function add_rules(rule) {
-    var existing_rules = $('#rules').val();
-    var new_rule = existing_rules + rule;
-    $('#rules').val(new_rule);
-    var src_url = $('#src_img').val();
-    var split_url = src_url.split('upload/');
-    var new_url = split_url[0] + "upload/" + new_rule + split_url[1];
-    $('#complete_url').val(new_url);
-    $('#new_image').attr('src', new_url);
-}
