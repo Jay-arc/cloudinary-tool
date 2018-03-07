@@ -36,82 +36,61 @@
         </section>
         <!-- Crop inputs -->
         <section class="container buttons-and-fields">
-            <form id="coords" class="coords" onsubmit="return false;" action="http://example.com/post.php">
-
-                <div class="inline-labels">
-                    <label>X1
-                        <input type="text" size="4" id="x1" name="x1" />
+            <div class="row">
+                <div class="crop_buttons">
+                    <button type="button" id="crop" class="btn btn-secondary">Crop</button>
+                    <button type="button" id="set_crop" class="btn btn-secondary" disabled>Set Crop</button>
+                </div>
+                <div class="col-md-6">
+                    <label>
+                        <input placeholder="Width" class="form-control" type="number" id="x_crop">
                     </label>
-                    <label>Y1
-                        <input type="text" size="4" id="y1" name="y1" />
-                    </label>
-                    <label>X2
-                        <input type="text" size="4" id="x2" name="x2" />
-                    </label>
-                    <label>Y2
-                        <input type="text" size="4" id="y2" name="y2" />
-                    </label>
-                    <label>W
-                        <input type="text" size="4" id="w" name="w" />
-                    </label>
-                    <label>H
-                        <input type="text" size="4" id="h" name="h" />
+                    <label>
+                        <input placeholder="Height" class="form-control" type="number" id="y_crop">
                     </label>
                 </div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" id="crop" class="btn btn-secondary">Crop</button>
-                        <button type="button" id="set_crop" class="btn btn-secondary" disabled>Set Crop</button>
-                    </div>
-            </form>
+            </div>
         </section>
         <!-- bottom ui divider -->
         <section class="container buttons-and-fields">
-            <div class="row container" id="unused_rules">
-                <div class="collapse angle-input" id="angleinput">
-                    <input class="form-control angle-input" type="text" placeholder="#">
-                </div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <a class="btn btn-primary" data-toggle="collapse" href="#angleinput" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        <button type="button" class="btn btn-primary">Angle</button>
-                    </a>
+            <div class="row" id="unused_rules">
                     <button type="button" class="btn btn-secondary">Flip Horizontal</button>
                     <button type="button" class="btn btn-secondary">Flip Veritcal</button>
-                </div>
             </div>
         </section>
         <!-- text fields -->
         <section class="container results-section">
             <div class="row">
-                <div class="col-1">
+                <div>
                     <a class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
                         <button type="button" class="btn btn-secondary">Copy</button>
                     </a>
                 </div>
-                <div class="col-11">
+                <div class="col-xlg-11 col-sm-10">
                     <textarea class="form-control form-control-textarea" type="text" placeholder="Original URL" id="src_img"></textarea>
                 </div>
             </div>
         </section>
         <section class="container results-section">
             <div class="row">
-                <div class="col-1">
+                <div>
                     <a class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
                         <button type="button" class="btn btn-secondary">Copy</button>
                     </a>
                 </div>
-                <div class="col-11">
+                <div class="col-xlg-11 col-sm-10">
                     <textarea id="rules" class="form-control form-control-textarea" type="text" placeholder="Rules"></textarea>
                 </div>
             </div>
         </section>
         <section class="container results-section">
             <div class="row">
-                <div class="col-1">
+                <div>
                     <a class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
                         <button type="button" class="btn btn-secondary">Copy</button>
                     </a>
                 </div>
-                <div class="col-11">
+                <div class="col-xlg-11 col-sm-10">
                     <textarea id="complete_url" class="form-control form-control-textarea" type="text" placeholder="Complete URL"></textarea>
                 </div>
             </div>

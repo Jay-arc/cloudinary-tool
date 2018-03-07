@@ -18,7 +18,7 @@ $('#unused_rules button').click(function () {
     add_rules(rule);
 });
 
-export function add_rules(rule) {
+function add_rules(rule) {
     var existing_rules = $('#rules').val();
     var new_rule = existing_rules + rule;
     $('#rules').val(new_rule);
