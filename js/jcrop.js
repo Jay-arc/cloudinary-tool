@@ -32,7 +32,8 @@ $('#crop').click(function () {
     }
     else {
         //set bootstap alert to tell the user to set values of the crop
-        alert('booo');
+        var no_crop_error_message = '<div class="alert alert-warning alert-dismissible fade show" role="alert"><strong>No Crop Dimmensions Set!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>' 
+        $('#error_messages').append(no_crop_error_message);
     }
 });
 

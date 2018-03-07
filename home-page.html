@@ -23,6 +23,7 @@
     <div id="openmySidenav" class="open-nav-button">
         <a onclick="openNav()" class="open-nav-carrot">></a>
     </div>
+
     <!-- display pane on right, image data on the left -->
     <div id="wrapper" class="">
         <section class="container photo-view">
@@ -34,6 +35,16 @@
                     <img class="img-fluid" id="new_image" src="http://via.placeholder.com/1000x600?text=new-better-image" alt="">
                 </div>
         </section>
+        <!-- Error message -->
+        <div class="row">
+
+            <div class="container">
+                <div id="error_messages">
+
+
+                </div>
+            </div>
+        </div>
         <!-- Crop inputs -->
         <section class="container buttons-and-fields">
             <div class="row">
@@ -54,8 +65,8 @@
         <!-- bottom ui divider -->
         <section class="container buttons-and-fields">
             <div class="row" id="unused_rules">
-                    <button type="button" class="btn btn-secondary">Flip Horizontal</button>
-                    <button type="button" class="btn btn-secondary">Flip Veritcal</button>
+                <button type="button" class="btn btn-secondary">Flip Horizontal</button>
+                <button type="button" class="btn btn-secondary">Flip Veritcal</button>
             </div>
         </section>
         <!-- text fields -->
