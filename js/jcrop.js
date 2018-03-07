@@ -22,7 +22,10 @@ $('#crop').click(function () {
             onChange: showCoords,
             onSelect: showCoords,
             onRelease: clearCoords,
-            aspectRatio: x_crop / y_crop
+            aspectRatio: x_crop / y_crop,
+            bgColor: 'black', 
+            bgOpacity: 0.4,
+            addClass: 'jcrop-dark'
         }, function () {
             jcrop_api = this;
         });
