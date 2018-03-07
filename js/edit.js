@@ -15,6 +15,21 @@ $('#unused_rules button').click(function () {
     else if (rule === 'Flip Veritcal') {
         rule = "a_vflip/";
     }
+    else if (rule === 'Invert colors') {
+        rule = "e_negate/";
+    }
+    else if (rule === 'Improve') {
+        rule = "e_improve/";
+    }
+    else if (rule === 'Make Background Transparent') {
+        rule = "e_make_transparent/";
+    }
+    else if (rule === 'Sharpen') {
+        rule = "e_sharpen/";
+    }
+    else if (rule === 'Make Circular') {
+        rule = "r_max/";
+    }
     add_rules(rule);
 });
 

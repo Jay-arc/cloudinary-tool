@@ -39,10 +39,7 @@
         <div class="row">
 
             <div class="container">
-                <div id="error_messages">
-
-
-                </div>
+                <div id="error_messages"></div>
             </div>
         </div>
         <!-- Crop inputs -->
@@ -67,6 +64,11 @@
             <div class="row" id="unused_rules">
                 <button type="button" class="btn btn-secondary">Flip Horizontal</button>
                 <button type="button" class="btn btn-secondary">Flip Veritcal</button>
+                <button type="button" class="btn btn-secondary">Invert colors</button>
+                <button type="button" class="btn btn-secondary">Improve</button>
+                <button type="button" class="btn btn-secondary">Make Background Transparent</button>
+                <button type="button" class="btn btn-secondary">Sharpen</button>
+                <button type="button" class="btn btn-secondary">Make Circular</button>
             </div>
         </section>
         <!-- text fields -->
@@ -90,14 +92,14 @@
                     </a>
                 </div>
                 <div class="col-xlg-11 col-sm-10">
-                    <textarea  class="form-control form-control-textarea" type="text" placeholder="Rules" id="rules"></textarea>
+                    <textarea class="form-control form-control-textarea" type="text" placeholder="Rules" id="rules"></textarea>
                 </div>
             </div>
         </section>
         <section class="container results-section">
             <div class="row">
                 <div>
-                        <button class="btn btn-secondary form-control-copy" type="button" data-clipboard-target="#complete_url" >Copy</button>
+                    <button class="btn btn-secondary form-control-copy" type="button" data-clipboard-target="#complete_url">Copy</button>
                 </div>
                 <div class="col-xlg-11 col-sm-10">
                     <textarea class="form-control form-control-textarea" type="text" placeholder="Complete URL" id="complete_url"></textarea>
