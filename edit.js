@@ -11,7 +11,6 @@ $('#unused_rules button').click(function () {
     console.log(rule);
     if (rule === "Flip Horizontal") {
         rule = "a_hflip/";
-
     }
     else if (rule === 'Flip Veritcal') {
         rule = "a_vflip/";
