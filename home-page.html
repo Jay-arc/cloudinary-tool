@@ -73,7 +73,7 @@
         <section class="container results-section">
             <div class="row">
                 <div>
-                    <a class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
+                    <a data-clipboard-target="#src_img" class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
                         <button type="button" class="btn btn-secondary">Copy</button>
                     </a>
                 </div>
@@ -85,24 +85,22 @@
         <section class="container results-section">
             <div class="row">
                 <div>
-                    <a class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
+                    <a data-clipboard-target="#rules" class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
                         <button type="button" class="btn btn-secondary">Copy</button>
                     </a>
                 </div>
                 <div class="col-xlg-11 col-sm-10">
-                    <textarea id="rules" class="form-control form-control-textarea" type="text" placeholder="Rules"></textarea>
+                    <textarea  class="form-control form-control-textarea" type="text" placeholder="Rules" id="rules"></textarea>
                 </div>
             </div>
         </section>
         <section class="container results-section">
             <div class="row">
                 <div>
-                    <a class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
-                        <button type="button" class="btn btn-secondary">Copy</button>
-                    </a>
+                        <button class="btn btn-secondary form-control-copy" type="button" data-clipboard-target="#complete_url" >Copy</button>
                 </div>
                 <div class="col-xlg-11 col-sm-10">
-                    <textarea id="complete_url" class="form-control form-control-textarea" type="text" placeholder="Complete URL"></textarea>
+                    <textarea class="form-control form-control-textarea" type="text" placeholder="Complete URL" id="complete_url"></textarea>
                 </div>
             </div>
         </section>
@@ -132,6 +130,8 @@
         <script src="js/jquery.Jcrop.js"></script>
         <script src="js/jcrop.js"></script>
         <script src="js/clipboard.min.js"></script>
+        <!-- clipboard functionality -->
+        <script type="text/javascript"> ClipboardJS('.form-control-copy')</script>
 </body>
 
 </html>
