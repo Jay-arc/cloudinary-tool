@@ -12,6 +12,21 @@ $('#unused_rules button').click(function () {
     if (rule === "Flip Horizontal") {
         rule = "a_hflip/";
     }
+    else if (rule === 'Hero') {
+        rule = "ar_5:3,c_crop/w_2000,h_1200/";
+    }
+    else if (rule === 'Interior Hero') {
+        rule = "ar_20:3,c_crop/w_2000,h_300/";
+    }
+    else if (rule === '1/2 Column') {
+        rule = "ar_12:10,c_crop/w_1200,h_1000/";
+    }
+    else if (rule === '1/3rd Column') {
+        rule = "ar_66:40,c_crop/w_660,h_400/";
+    }
+    else if (rule === '1/4th Column') {
+        rule = "ar_5:3,c_crop/w_500,h_300/";
+    }
     else if (rule === 'Flip Veritcal') {
         rule = "a_vflip/";
     }
@@ -28,7 +43,10 @@ $('#unused_rules button').click(function () {
         rule = "e_sharpen/";
     }
     else if (rule === 'Make Circular') {
-        rule = "r_max/";
+        rule = "ar_1:1,c_crop/r_max/";
+    }
+    else if (rule === 'Rounded Corner Icon') {
+        rule = "ar_1:1,c_crop/r_20/";
     }
     add_rules(rule);
 });

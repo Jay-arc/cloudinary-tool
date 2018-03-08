@@ -150,5 +150,70 @@ body {
     display: inline-block;
   }
   #unused_rules button{
-    margin-right:5px; 
+    margin-right:5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
+
+.alert-warning, .alert-warning .close:hover {
+  color: #ffffff;
+  background-color: #ffffff47;
+  border-color: #ffffff;
+}
+.crop_Rules button{
+ background-color: #5f9ea0;
+ color: #fff;
+ border-color: #ffffff;
+}
+.orientation_rules button {
+  background-color: #9249d6;
+  color: #fff;
+  border-color: #ffffff;
+ }
+
+
+
+
+/* color rules */
+
+.color_rules button {
+  color: rgb(44, 44, 44);
+  border-color: rgb(44, 44, 44);
+ }
+
+/* css rainbbow by https://codepen.io/srm4nu/pen/OVXXmj */
+.rainbow {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 10s infinite; 
+  /* Internet Explorer */
+  -ms-animation: rainbow 10s infinite;
+  /* Standar Syntax */
+  animation: rainbow 10s infinite; 
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	20%{background-color: hsl(0, 100%, 82%);}
+	40%{background-color: hsl(60, 100%, 83%);}
+	60%{background-color: hsl(120, 100%, 83%);}
+	80%{background-color: hsl(240, 100%, 84%);}
+	100%{background-color: hsl(38, 100%, 74%);}	
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+	20%{background-color: hsl(0, 100%, 82%);}
+	40%{background-color: hsl(60, 100%, 83%);}
+	60%{background-color: hsl(120, 100%, 83%);}
+	80%{background-color: hsl(240, 100%, 84%);}
+	100%{background-color: hsl(38, 100%, 74%);}	
+}
+/* Standar Syntax */
+@keyframes rainbow{
+	20%{background-color: hsl(0, 100%, 82%);}
+	40%{background-color: hsl(60, 100%, 83%);}
+	60%{background-color: hsl(120, 100%, 83%);}
+	80%{background-color: hsl(240, 100%, 84%);}
+	100%{background-color: hsl(38, 100%, 74%);}	
+}
+#complete_url {
+  margin-bottom: 200px;
+}
