@@ -14,16 +14,6 @@
 </head>
 
 <body>
-    <!-- navigation -->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <p class="nav-link-disabled" href="#">Single Image Edits</p>
-        <a class="nav-link-active" href="bulk-modification.html">Bulk Modification</a>
-    </div>
-    <div id="openmySidenav" class="open-nav-button">
-        <a onclick="openNav()" class="open-nav-carrot">></a>
-    </div>
-
     <!-- display pane on right, image data on the left -->
     <div id="wrapper" class="">
         <section class="container photo-view">
@@ -62,16 +52,22 @@
         <!-- bottom ui divider -->
         <section class="container buttons-and-fields">
             <div id="unused_rules">
+            <div>
+                    <p class="rule-button-group-label">Crop Rules</p>
                 <div class="row crop_Rules">
+                    
                     <button type="button" class="btn btn-secondary">Hero</button>
                     <button type="button" class="btn btn-secondary">Interior Hero</button>
                     <button type="button" class="btn btn-secondary">1/2 Column</button>
                     <button type="button" class="btn btn-secondary">1/3rd Column</button>
                     <button type="button" class="btn btn-secondary">1/4th Column</button>
                 </div>
+            </div>
                 <div class="row orientation_rules">
                     <button type="button" class="btn btn-secondary">Flip Horizontal</button>
                     <button type="button" class="btn btn-secondary">Flip Veritcal</button>
+                    <button type="button" class="btn btn-secondary">Rotate 90 degrees clockwise</button>
+                    <button type="button" class="btn btn-secondary">Rotate 90 degrees counterclockwise</button>
                 </div>
                 <div class="row color_rules">
                     <button type="button" class="btn btn-secondary rainbow">Invert colors</button>

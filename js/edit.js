@@ -48,6 +48,12 @@ $('#unused_rules button').click(function () {
     else if (rule === 'Rounded Corner Icon') {
         rule = "ar_1:1,c_crop/r_20/";
     }
+    else if (rule === 'Rotate 90 degrees clockwise') {
+        rule = "a_90/";
+    }
+    else if (rule === 'Rotate 90 degrees counterclockwise') {
+        rule = "a_-90/";
+    }
     add_rules(rule);
 });
 
