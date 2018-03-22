@@ -16,39 +16,24 @@
 </head>
 
 <body>
-
-
-
     <!-- cd-image-container -->
-    <!-- display pane on right, image data on the left -->
     <div id="wrapper" class="">
         <section class="container photo-view">
                 <div class="container">
-                        <figure class="cd-image-container">
-                            <img id="src_img_url" class="img-fluid" src="http://via.placeholder.com/1000x600?text=original-image" alt="">
+                        <figure class="cd-image-container image-comparison-area">
+                            <img id="src_img_url" class="img-fluid" src="http://via.placeholder.com/1000x600/000000/ffffff?text=picture" alt="">
                             <span class="cd-image-label" data-type="original">Original</span>
                 
                             <div class="cd-resize-img photo-pane">
                                 <!-- the resizable image on top -->
-                                <img id="new_image" src="http://via.placeholder.com/1000x600?text=new-better-image" alt="Modified Image">
-                                <span class="cd-image-label" data-type="modified">Modified</span>
+                                <img id="new_image" src="http://via.placeholder.com/1000x600/ffffff/000000?text=picture" alt="Modified Image">
+                                <span class="cd-image-label cd-image-label-modified" data-type="modified">Modified</span>
                             </div>
                 
                             <span class="cd-handle"></span>
                             <!-- slider handle -->
                         </figure>
                     </div>
-
-                    
-          <!--   <div class="row photo-view">
-                <div class="col-6 photo-pane-left container">
-                    <img id="src_img_url" class="img-fluid" src="http://via.placeholder.com/1000x600?text=original-image" alt="">
-                </div>
-                <div class="col-6 photo-pane">
-                    <img class="img-fluid" id="new_image" src="http://via.placeholder.com/1000x600?text=new-better-image" alt="">
-                </div>
-        </section>
-
         <!-- Error message -->
         <div class="row">
 
@@ -125,10 +110,15 @@
                 <div class="rule-button-group-label">
                     <p>Current Modifications</a>
                 </div>
+                <div class="results-section">
+                        <div class="">
+                            <div class="">
+                                <textarea class="form-control current-modifications-field" type="text" placeholder="Rules" id="rules"></textarea>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </section>
-
-        <!-- text fields -->
         <section class="container results-section">
             <div class="row">
                 <div>
@@ -144,18 +134,6 @@
         <section class="container results-section">
             <div class="row">
                 <div>
-                    <a data-clipboard-target="#rules" class="btn btn-secondary form-control-copy" data-toggle="" href="" role="button" aria-expanded="false">
-                        <button type="button" class="btn btn-secondary">Copy</button>
-                    </a>
-                </div>
-                <div class="col-xlg-11 col-sm-10">
-                    <textarea class="form-control form-control-textarea" type="text" placeholder="Rules" id="rules"></textarea>
-                </div>
-            </div>
-        </section>
-        <section class="container results-section">
-            <div class="row">
-                <div>
                     <button class="btn btn-secondary form-control-copy" type="button" data-clipboard-target="#complete_url">Copy</button>
                 </div>
                 <div class="col-xlg-11 col-sm-10">
@@ -163,34 +141,7 @@
                 </div>
             </div>
         </section>
-        <section>
-            <p>
-                <button class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false"
-                    ; aria-controls="multiCollapseExample1">Toggle first element</button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false"
-                    aria-controls="multiCollapseExample2">Toggle second element</button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false"
-                    aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
-            </p>
-            <div class="row">
-                <div class="col">
-                    <div class="collapse multi-collapse" id="multiCollapseExample1">
-                        <div class="card card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="collapse multi-collapse" id="multiCollapseExample2">
-                        <div class="card card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         </div>
         <!--  -->
         <!--  -->

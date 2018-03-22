@@ -10,7 +10,10 @@ body {
   .nav-item .disabled {
     color: #8e8e8e;
   }
-  
+
+.image-comparison-area {
+  margin-top: 1vh;
+}
   .vertical-hr {
     color: #e0e0e0;
     border-color: #e0e0e0;
@@ -20,6 +23,10 @@ body {
     width: 1px;
   }
   
+.cd-image-label-modified {
+  color: #000000;
+}
+
   .padded-hr {
     padding-top: 10px;
     color: #e0e0e0;
@@ -118,9 +125,6 @@ color:#ffffff;
 border-bottom: 1px solid rgb(255, 255, 255);
 width: -webkit-fill-available;
 margin-bottom: 0px;
-}
-
-.label-hr {
 }
 
 .white-hr {

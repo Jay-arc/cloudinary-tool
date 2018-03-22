@@ -1,8 +1,14 @@
 // @ts-check
 $('#src_img').blur(function () {
-    var src_img = $('#src_img').val();
-    $('#src_img_url').attr('src', src_img);
-    $('#new_image').attr('src', src_img);
+            var src_img = $('#src_img').val();
+                if (src_img !== ""){
+                    $('#src_img_url').attr('src', src_img);
+                    $('#new_image').attr('src', src_img);
+                }
+                else {
+                    $('#src_img_url').attr('src', 'http://via.placeholder.com/1000x600/000000/ffffff?text=picture');
+                    $('#new_image').attr('src', 'http://via.placeholder.com/1000x600/ffffff/000000?text=picture');
+                }
 });
 
 $('#unused_rules button').click(function () {
