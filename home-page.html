@@ -4,20 +4,43 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css"><!-- Resource style -->
+    <link rel="stylesheet" href="css/reset.css"><!-- CSS reset -->
+    <script src="js/modernizr.js"></script><!-- Modernizr -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" media="screen" href="style-1.css">
-    <title>Single image updates</title>
     <link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
+    <title>Single image updates</title>
 </head>
 
 <body>
+
+
+
+    <!-- cd-image-container -->
     <!-- display pane on right, image data on the left -->
     <div id="wrapper" class="">
         <section class="container photo-view">
-            <div class="row photo-view">
+                <div class="container">
+                        <figure class="cd-image-container">
+                            <img id="src_img_url" class="img-fluid" src="http://via.placeholder.com/1000x600?text=original-image" alt="">
+                            <span class="cd-image-label" data-type="original">Original</span>
+                
+                            <div class="cd-resize-img photo-pane">
+                                <!-- the resizable image on top -->
+                                <img id="new_image" src="http://via.placeholder.com/1000x600?text=new-better-image" alt="Modified Image">
+                                <span class="cd-image-label" data-type="modified">Modified</span>
+                            </div>
+                
+                            <span class="cd-handle"></span>
+                            <!-- slider handle -->
+                        </figure>
+                    </div>
+
+                    
+          <!--   <div class="row photo-view">
                 <div class="col-6 photo-pane-left container">
                     <img id="src_img_url" class="img-fluid" src="http://via.placeholder.com/1000x600?text=original-image" alt="">
                 </div>
@@ -25,6 +48,7 @@
                     <img class="img-fluid" id="new_image" src="http://via.placeholder.com/1000x600?text=new-better-image" alt="">
                 </div>
         </section>
+
         <!-- Error message -->
         <div class="row">
 
@@ -32,6 +56,7 @@
                 <div id="error_messages"></div>
             </div>
         </div>
+
         <!-- Crop inputs -->
         <section class="container buttons-and-fields">
             <div class="row">
@@ -47,41 +72,62 @@
                         <input placeholder="Height" class="form-control" type="number" id="y_crop">
                     </label>
                 </div>
+
             </div>
         </section>
+
         <!-- bottom ui divider -->
-        <section class="container buttons-and-fields">
-            <div id="unused_rules">
-            <div>
-                    <p class="rule-button-group-label">Crop Rules</p>
-                <div class="row crop_Rules">
-                    
+        <section class="container buttons-and-fields row">
+            <div class="col-6" id="unused_rules">
+                <!-- crop_Rules -->
+                <div class="row rule-button-group-label">
+                    <a data-toggle="collapse" href="#crop_rules_button_group" class="">Crop Rules</a>
+                </div>
+                <div id="crop_rules_button_group" class="row collapse all-rules-buttons-collapse crop_rules">
                     <button type="button" class="btn btn-secondary">Hero</button>
                     <button type="button" class="btn btn-secondary">Interior Hero</button>
                     <button type="button" class="btn btn-secondary">1/2 Column</button>
                     <button type="button" class="btn btn-secondary">1/3rd Column</button>
                     <button type="button" class="btn btn-secondary">1/4th Column</button>
                 </div>
-            </div>
-                <div class="row orientation_rules">
+
+                <!-- orientation_rules -->
+                <div class="row rule-button-group-label">
+                    <a data-toggle="collapse" href="#orientation_rules_button_group" class="">Rotational Rules</a>
+                </div>
+                <div id="orientation_rules_button_group" class="row collapse all-rules-buttons-collapse row orientation_rules">
                     <button type="button" class="btn btn-secondary">Flip Horizontal</button>
                     <button type="button" class="btn btn-secondary">Flip Veritcal</button>
                     <button type="button" class="btn btn-secondary">Rotate 90 degrees clockwise</button>
                     <button type="button" class="btn btn-secondary">Rotate 90 degrees counterclockwise</button>
                 </div>
-                <div class="row color_rules">
+                <!-- color_rules -->
+                <div class="row rule-button-group-label">
+                    <a data-toggle="collapse" href="#color_rules_button_group" class="">Color Rules</a>
+                </div>
+                <div id="color_rules_button_group" class="row collapse all-rules-buttons-collapse row color_rules">
                     <button type="button" class="btn btn-secondary rainbow">Invert colors</button>
                     <button type="button" class="btn btn-secondary rainbow">Improve</button>
                     <button type="button" class="btn btn-secondary rainbow">Make Background Transparent</button>
                     <button type="button" class="btn btn-secondary rainbow">Sharpen</button>
                     <button type="button" class="btn btn-secondary rainbow">Make Circular</button>
                 </div>
-                <div class="row">
+                <!-- Misc_rules -->
+                <div class="row rule-button-group-label">
+                    <a data-toggle="collapse" href="#misc_rules_button_group" class="">Misc Rules</a>
+                </div>
+                <div id="misc_rules_button_group" class="row collapse all-rules-buttons-collapse row misc_rules">
                     <button type="button" class="btn btn-secondary">Make Circular</button>
                     <button type="button" class="btn btn-secondary">Rounded Corner Icon</button>
                 </div>
             </div>
+            <div class="col-6" id="used_rules">
+                <div class="rule-button-group-label">
+                    <p>Current Modifications</a>
+                </div>
+            </div>
         </section>
+
         <!-- text fields -->
         <section class="container results-section">
             <div class="row">
@@ -117,21 +163,37 @@
                 </div>
             </div>
         </section>
+        <section>
+            <p>
+                <button class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false"
+                    ; aria-controls="multiCollapseExample1">Toggle first element</button>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false"
+                    aria-controls="multiCollapseExample2">Toggle second element</button>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false"
+                    aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+            </p>
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="card card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
+                            craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
+                            craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         </div>
         <!--  -->
         <!--  -->
-        <!-- Optional JavaScript -->
-        <script>
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
-        </script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -142,8 +204,13 @@
         <script src="js/edit.js"></script>
         <script src="js/jquery.Jcrop.js"></script>
         <script src="js/jcrop.js"></script>
+        <script src="js/crop.fields.check.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-
+        <script src="js/jquery-2.1.1.js"></script>
+        <script src="js/jquery.mobile.custom.min.js"></script>
+        <!-- Resource jQuery -->
+        <script src="js/main.js"></script>
+        <!-- Resource jQuery -->
         <!-- clipboard functionality -->
         <script type="text/javascript">new ClipboardJS('.form-control-copy')</script>
 </body>

@@ -84,6 +84,10 @@ body {
     border-top: 1px #ffffff solid;
     padding-top: 10px;
     margin-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .crop_buttons button{
     display: inline-block;
@@ -99,7 +103,7 @@ body {
   background-color: #ffffff47;
   border-color: #ffffff;
 }
-.crop_Rules button{
+.crop_rules button {
  background-color: #5f9ea0;
  color: #fff;
  border-color: #ffffff;
@@ -109,11 +113,22 @@ body {
   color: #fff;
   border-color: #ffffff;
  }
-.rule-button-group-label p {
+.rule-button-group-label p, .rule-button-group-label a {
 color:#ffffff;
+border-bottom: 1px solid rgb(255, 255, 255);
+width: -webkit-fill-available;
+margin-bottom: 0px;
 }
 
+.label-hr {
+}
 
+.white-hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgb(255, 255, 255);
+}
 
 /* color rules */
 
@@ -157,4 +172,34 @@ color:#ffffff;
 }
 #complete_url {
   margin-bottom: 200px;
+}
+
+
+  /* https://codyhouse.co/gem/css-jquery-image-comparison-slider/ */
+.cd-resize-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  /* Force Hardware Acceleration in WebKit */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+.is-visible .cd-resize-img {
+  width: 50%;
+  /* bounce in animation of the modified image */
+  animation: cd-bounce-in 0.7s;
+}
+@keyframes cd-bounce-in {
+  0% {
+    width: 0;
+  }
+  60% {
+    width: 55%;
+  }
+  100% {
+    width: 50%;
+  }
 }
